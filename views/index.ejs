@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar_menu">
+            <nav class="navbar navbar-expand-xl navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logo.svg" width="30" height="30" alt="">
+                  </a>
+        
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                      <a class="nav-item nav-link" href="#">Features</a>
+                      <a class="nav-item nav-link" href="#">Pricing</a>
+                      <a class="nav-item nav-link" href="#">Disabled</a>
+                    </div>
+                  </div>
+              </nav>
+        </div>
+        <div class="table">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">FullName</th>
+                    <th scope="col">Active</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i < users.length; i++) { %>
+                        <tr>
+                          <td><%= users[i].id %></td>
+                          <td><%= users[i].username %></td>
+                          <td><%= users[i].full_name %></td>
+                          <td>
+                            <% if(true){ %>
+                                <button type="button" class="btn btn-success small">Faol</button>
+                              <% } else{ %>  
+                                <button type="button" class="btn btn-danger">Danger</button>
+                             <% } %>
+                            </td>
+
+                        </tr>
+                     <% } %>
+                </tbody>
+              </table>
+            <!-- <table>
+                <% for(var i=0; i < users.length; i++) { %>
+                   <tr>
+                     <td><%= users[i].id %></td>
+                     <td><%= users[i].full_name %></td>
+                     <td><%= users[i].username %></td>
+                   </tr>
+                <% } %>
+                </table> -->
+        </div>
+    </div>
+</body>
+</html>
